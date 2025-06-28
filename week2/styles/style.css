@@ -1,0 +1,204 @@
+@import url(./normalize.css);
+
+@keyframes zoom {
+  from {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.05);
+  }
+}
+
+:root {
+  --title-text-color: #333333;
+  --text-color: #000000;
+  --category-text-color: #0000007a;
+
+  --focus-color: #2049df;
+  --hover-color: #f5f5f5;
+
+  /* 메인 텍스트 */
+  --text-size-large: 18px;
+  /* 게임 제목, 페이지 인디케이터 텍스트 */
+  --text-size-medium: 16px;
+  /* 게임 설명, 카테고리 텍스트 */
+  --text-size-small: 14px;
+}
+
+.carousel {
+  margin: 20px;
+  border: 1px solid #eeeeee;
+  border-radius: 16px;
+  width: 384px;
+
+  display: flex;
+  flex-direction: column;
+
+  .carousel__header {
+    padding: 10px;
+  }
+}
+
+.recommend-games {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 5.5px 11.5px 6.5px;
+
+  .recommend-games__title {
+    color: var(--title-text-color, #333333);
+    text-align: center;
+    font-family: "Noto Sans KR";
+    font-size: var(--text-size-large, 18px);
+    font-style: normal;
+    font-weight: 700;
+    letter-spacing: -0.18px;
+    margin: 0;
+  }
+}
+
+.carousel-cards__container {
+  --card-width: 160px;
+  --card-height: 240px;
+  --gap: 16px;
+  --width: calc(2 * var(--card-width) + 16px);
+
+  .carousel-card__contents {
+    display: none;
+    padding: 0.75rem 1.5rem;
+
+    .carousel-card {
+      .image-wrapper {
+        margin-block-end: 3px;
+      }
+    }
+
+    &.is-selected {
+      display: flex;
+      flex-direction: row;
+      gap: var(--gap);
+
+      .carousel-card__image {
+        width: 160px;
+        height: 172px;
+        margin-block-start: 3px;
+        margin-block-end: -3px;
+        border-radius: 8px;
+
+        &:hover {
+          animation: zoom 1s;
+        }
+      }
+
+      .carousel-card__game-title {
+        overflow: hidden;
+        color: var(--text-color);
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        font-family: "Noto Sans KR";
+        font-size: var(--text-size-medium);
+        font-style: normal;
+        font-weight: 700;
+        line-height: 112%;
+        letter-spacing: -0.32px;
+        margin-block-start: 5px;
+        margin-block-end: 2px;
+      }
+
+      .carousel-card__game-description {
+        overflow: hidden;
+        color: var(--text-color);
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        font-family: "Noto Sans KR";
+        font-size: var(--text-size-small);
+        font-style: normal;
+        font-weight: 350;
+        line-height: 112%;
+        letter-spacing: -0.14px;
+        margin-block-end: 8px;
+      }
+
+      .carousel-card__game-category {
+        overflow: hidden;
+        color: var(--category-text-color);
+        text-overflow: ellipsis;
+        font-family: "Noto Sans KR";
+        font-size: var(--text-size-small);
+        font-style: normal;
+        font-weight: 350;
+        line-height: 112%;
+        letter-spacing: -0.14px;
+        margin-block-end: 4px;
+      }
+    }
+  }
+}
+
+.indicators-container {
+  --gap: 12px;
+
+  display: flex;
+  align-items: center;
+  gap: var(--gap);
+  margin-inline: auto;
+  padding-block: 10px;
+
+  .indicator__button {
+    border-radius: 50%;
+    height: 40px;
+
+    &:hover {
+      background-color: var(--hover-color);
+    }
+  }
+
+  .indicator__page {
+    color: #000;
+    text-align: center;
+    font-family: "Noto Sans KR";
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 112%; /* 20.16px */
+    letter-spacing: 5px;
+
+    .current-page {
+      font-weight: 700;
+    }
+  }
+}
+
+/* 배경 이미지 */
+.carousel-card {
+  .image-1 {
+    background-image: url(../assets/images/background-1.png);
+    background-size: 160px;
+    border-radius: 8px;
+  }
+  .image-2 {
+    background-image: url(../assets/images/background-2.png);
+    background-size: 160px;
+    border-radius: 8px;
+  }
+  .image-3 {
+    background-image: url(../assets/images/background-3.png);
+    background-size: 160px;
+    border-radius: 8px;
+  }
+  .image-4 {
+    background-image: url(../assets/images/background-4.png);
+    background-size: 160px;
+    border-radius: 8px;
+  }
+  .image-5 {
+    background-image: url(../assets/images/background-5.png);
+    background-size: 160px;
+    border-radius: 8px;
+  }
+  .image-6 {
+    background-image: url(../assets/images/background-6.png);
+    background-size: 160px;
+    border-radius: 8px;
+  }
+}
