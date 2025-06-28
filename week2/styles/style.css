@@ -37,6 +37,7 @@
   .carousel__header {
     padding: 10px;
   }
+  
 }
 
 .recommend-games {
@@ -44,6 +45,7 @@
   align-items: center;
   gap: 6px;
   padding: 5.5px 11.5px 6.5px;
+  border-radius: 100px;
 
   .recommend-games__title {
     color: var(--title-text-color, #333333);
@@ -54,6 +56,11 @@
     font-weight: 700;
     letter-spacing: -0.18px;
     margin: 0;
+  }
+
+  &:hover {
+    background: var(--hover-color);
+    cursor: pointer;
   }
 }
 
@@ -150,6 +157,7 @@
 
     &:hover {
       background-color: var(--hover-color);
+      cursor: pointer;
     }
   }
 
@@ -202,3 +210,4 @@
     border-radius: 8px;
   }
 }
+
