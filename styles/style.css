@@ -1,0 +1,52 @@
+@import "./common/normalize.css";
+
+body {
+  margin: 20px;
+}
+
+.heading-title {
+  font-size: 2rem;
+  font-weight: 500;
+}
+
+.links {
+  display: flex;
+  gap: 16px;
+  margin-block: 16px;
+
+  .link-wrapper {
+    border: 2px dotted #252325;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    border-radius: 16px;
+    height: 500px;
+
+    .hw-title {
+      font-size: 1.5rem;
+      font-weight: 600;
+    }
+
+    .hw-link {
+      position: absolute;
+      font-size: 1rem;
+      font-weight: 400;
+      right: 16px;
+      padding: 8px 16px;
+      border: 1px solid #252325;
+      border-radius: 64px;
+      transition: 0.1s ease-in-out;
+
+      &:hover {
+        background-color: #252325;
+        color: #ffffff;
+      }
+    }
+
+    .preview-image {
+      width: 400px;
+      margin-block-start: 20px;
+    }
+  }
+}
