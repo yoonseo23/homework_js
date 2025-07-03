@@ -3,7 +3,6 @@
   const textList = landingpage.querySelector(".text-section");
   const animationObjects = landingpage.querySelector(".animation");
 
-  const likelion = textList.querySelector(".company");
   const mainText = textList.querySelector(".main-typo");
   const noPrac = mainText.querySelector("#no-practice");
   const noEnhance = mainText.querySelector("#no-enhancement");
@@ -19,6 +18,7 @@
   const lineList = Array.from(lines.querySelectorAll("path"));
 
   linkList.addEventListener('click', (e) => {
+    if(e.target !== feSchool && e.target !== curriculum) return
     if (e.target === feSchool) {
       textAnimation()
     }
