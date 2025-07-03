@@ -1,4 +1,4 @@
-@import url(./normalize.css);
+@import url(./../../styles/common/normalize.css);
 
 @keyframes zoom {
   from {

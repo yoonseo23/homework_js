@@ -1,5 +1,5 @@
 @layer normalize, theme, style;
 
-@import "./normalize.css" layer(normalize);
+@import "./../../styles/common/normalize.css" layer(normalize);
 @import "./theme.css" layer(theme);
 @import "./style.css" layer(style);
