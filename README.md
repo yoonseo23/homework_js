@@ -17,7 +17,6 @@ homework_js
 │    ├── js /
 │    │    └── main.js
 │    ├── style /
-│    │    ├── normalize.css // 요소 기본값 초기화
 │    │    └── style.css
 │    └── carousel.html
 ├── week4 / // 4주차 과제 폴더
@@ -27,11 +26,15 @@ homework_js
 │    ├── js /
 │    │    └── main.js
 │    ├── style /
-│    │    ├── normalize.css
 │    │    ├── theme.css // 시안 색상값 관리
 │    │    ├── style.css
 │    │    └── main.css
 │    └── animation.html
+├── preview-images / // 과제 미리보기 이미지 파일
+├── styles /
+│    ├── common /
+│    │    └── normalize.css // 요소 기본값 초기화
+│    └── main.css
 ├── index.html
 └── README.md // 저장소 설명 및 회고 작성
 ```
