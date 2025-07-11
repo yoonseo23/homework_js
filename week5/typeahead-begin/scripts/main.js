@@ -34,7 +34,6 @@
     searchInput.value = target.textContent
     list.setAttribute('hidden', 'true')
     
-    
   })
 
   function toBoldSearchTerms(string, searchTerm) {
